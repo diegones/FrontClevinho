@@ -1,0 +1,42 @@
+
+input {
+
+    background-color: #00000000;
+  
+    border: 0;
+  
+    color: #ffffff90;
+  
+    font-weight: lighter;
+  
+  }
+  
+  
+  
+  input:focus, .fist-input {  
+  
+    background-color: #ffffffef;
+  
+    color: #646464;
+  
+    font-style: italic;
+  
+    border: 1px solid white;
+  
+  }
+  
+  
+  
+  .form-new-customer input, .form-new-customer input.ng-touched {
+  
+    border: 1px solid #cccccc;
+  
+    color: #646464;
+  
+  }
+  
+  button {
+  
+    margin: 0 5px;
+  
+  }

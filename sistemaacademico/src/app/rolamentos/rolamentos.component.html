@@ -1,0 +1,46 @@
+
+<div class="container">
+	<h1>Cadastro de Rolamento</h1>
+	<form>
+		<div class="form-group">
+			<label for="nome">Nome</label> <input type="text"
+				class="form-control" name="nome" [(ngModel)]="rolamento.nome" 
+				required>
+		</div>
+		<div class="form-group">
+			<label for="cpf">Oem</label> <input type="text"
+				class="form-control" name="cpf" [(ngModel)]="rolamento.oem"
+				required>
+		</div>
+		<button class="btn btn-success" 
+		*ngIf="rolamento.id == null" (click)="cadasatrarRolamento()">Cadastrar</button>
+		<button class="btn btn-success" 
+		*ngIf="rolamento.id != null" (click)="updateRolamento()">Alterar</button>
+	</form>
+
+	<p></p>
+	<table class="table">
+		<tr>
+			<th>Nome</th>
+			<th>Oem</th>
+			<th>&nbsp;</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr *ngFor="let rolamento of rolamentos">
+			<td>{{rolamento.nome}} </td>
+			<td>{{rolamento.oem}}</td>
+			<td><button class="btn btn-success" (click)="carregarRolamento(rolamento)">Carregar</button></td>
+			<td><button class="btn btn-danger" (click)="deleteRolamento(rolamento)">Excluir</button></td>
+		</tr>
+	</table>
+	
+</div>
+
+
+
+
+
+
+
+
+
